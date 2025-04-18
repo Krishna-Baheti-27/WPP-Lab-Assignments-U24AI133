@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Your Online Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navbar -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">Amazon</div>
+            <div class="search-bar">
+                <input type="text" id="searchQuery" placeholder="Search for products, brands and more">
+                <a id="searchButton" href="#" target="_blank">
+                    <button>Search</button>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Login</a>
+                <a href="#">Cart</a>
+                <a href="#">Orders</a>
+            </nav>
+            <button class="menu-btn">&#9776;</button> <!-- Mobile Menu Button -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Biggest Sale is Live!</h1>
+            <p>Get up to 70% off on top brands</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="amazon.jpeg" alt="Sale Banner" width="100%">
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-container">
+            <div class="category">
+                <img src="phone.jpg" alt="Mobiles">
+                <p>Mobiles</p>
+            </div>
+            <div class="category">
+                <img src="cloth.jpg" alt="Fashion">
+                <p>Fashion</p>
+            </div>
+            <div class="category">
+                <img src="ac.jpg" alt="Electronics" class="category-image">
+                <p>Electronics</p>
+            </div>
+            <div class="category">
+                <img src="home.jpg" alt="Home & Kitchen">
+                <p>Home & Kitchen</p>
+            </div>
+            <div class="category">
+                <img src="beauty.jpg" alt="Beauty">
+                <p>Beauty</p>
+            </div>
+            <div class="category">
+                <img src="grocery.jpg" alt="Grocery">
+                <p>Grocery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Trending Deals</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="galaxys25.jpg" alt="Product 1">
+                <p>Galaxy S25 Ultra</p>
+                <p>1,20,000 Rs</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="shoes.jpg" alt="Product 2">
+                <p>Louis Philippe</p>
+                <p>5,000 Rs</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="fridege2.jpg" alt="Product 3">
+                <p>Whirlpool Smart Fridge</p>
+                <p>40,000 Rs</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+
+    <!-- Search Redirect Script -->
+    <script>
+        document.getElementById('searchQuery').addEventListener('input', function () {
+            let query = document.getElementById('searchQuery').value.trim();
+            let amazonURL = `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
+            document.getElementById('searchButton').href = amazonURL;
+        });
+    </script>
+
+</body>
+</html>

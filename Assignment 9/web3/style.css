@@ -1,0 +1,284 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* Floating Announcement Ticker */
+.ticker-container {
+  width: 100%;
+  background-color: #ffeb3b;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 8px 0;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.ticker {
+  display: inline-block;
+  animation: scrollTicker 20s linear infinite;
+}
+
+.ticker p {
+  display: inline-block;
+  padding-left: 100%;
+  color: #000;
+}
+
+.ticker a {
+  color: #0073aa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ticker a:hover {
+  text-decoration: underline;
+}
+
+/* Scrolling Animation */
+@keyframes scrollTicker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-bottom: 3px solid #0073aa;
+  margin-top: 30px;
+}
+
+.logo img,
+.icon img {
+  width: 80px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 22px;
+  color: #800000;
+}
+
+.title h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #0073aa;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+
+/* Sidebar Styling */
+.sidebar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0073aa;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar button:hover {
+  background-color: #005f85;
+}
+
+/* Sidebar Layout */
+main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Adjusting Sidebar Position */
+.sidebar.left {
+  order: 1;
+}
+
+.sidebar.right {
+  order: 3;
+}
+
+/* Center Content */
+.content {
+  width: 60%;
+  text-align: center;
+  order: 2;
+}
+
+/* Navbar Styling Fix */
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #0073aa;
+  padding: 10px 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.banner-container {
+    width: 100%; /* Adjust as per your layout */
+    height: 400px; /* Set height according to your layout */
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    overflow: hidden;
+    background-color: white; /* Optional: adds a background */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+}
+
+.admission-updates {
+    margin: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+}
+
+.helpline {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.updates {
+    list-style: none;
+    padding: 0;
+}
+
+.updates li {
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.updates a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.updates a:hover {
+    text-decoration: underline;
+}
+
+.notice-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notice-section h2 {
+    background: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.notice-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.notice-section ul li {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.notice-section ul li:last-child {
+    border-bottom: none;
+}
+
+.helpline {
+    margin-top: 15px;
+    padding: 15px;
+    background: #ffebee;
+    border-left: 5px solid red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.helpline p {
+    margin: 5px 0;
+}
+
+.helpline a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.helpline a:hover {
+    text-decoration: underline;
+}
+

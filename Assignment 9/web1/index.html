@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Foody</div>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Discover the best food & drinks in Your City</h1>
+        <div class="search-bar">
+            <input type="text" id="location" placeholder="Enter your location">
+            <input type="text" id="searchQuery" placeholder="Search for a restaurant, cuisine or dish">
+            <a id="searchButton" href="#" target="_blank">
+                <button>Search</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category"><img src="images/Burger.png" alt="Burger"><span>Order Food Online</span></div>
+        <div class="category"><img src="images/Noodles.png" alt="Noodles"><span>Go out for a meal</span></div>
+        <div class="category"><img src="images/Paratha.png" alt="Paratha"><span>Night Life & Clubs</span></div>
+        <div class="category"><img src="images/Pizza.png" alt="Pizza"><span>Zomato Pro</span></div>
+        <div class="category"><img src="images/Pasta.png" alt="Pasta"><span>Order Food Online</span></div>
+        <div class="category"><img src="images/Cake.png" alt="Cake"><span>Japanese Cuisine</span></div>
+        <div class="category"><img src="images/Biryani.png" alt="Biryani"><span>Indian Delicacy</span></div>
+        <div class="category"><img src="images/Pav Bhaji.png" alt="Pav Bhaji"><span>Maharashtrian Special</span></div>
+        <div class="category"><img src="images/Pure Veg.png" alt="Pure Veg"><span>Pure Veg</span></div>
+        <div class="category"><img src="images/Ice Cream.png" alt="Ice Cream"><span>Desserts</span></div>
+        <div class="category"><img src="images/Rasmalai.png" alt="Rasmalai"><span>Sweet Treats</span></div>
+        <div class="category"><img src="images/Dosa.png" alt="Dosa"><span>South Indian</span></div>
+        <div class="category"><img src="images/Momo.png" alt="Momo"><span>Quick Meals</span></div>
+        <div class="category"><img src="images/Khichdi.png" alt="Khichdi"><span>Vegetarian Delight </span></div>
+        <div class="category"><img src="images/Kebab.png" alt="Kebab"><span>Protein-Packed</span></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zomato Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('searchQuery').addEventListener('input', function () {
+            let query = document.getElementById('searchQuery').value.trim();
+            let zomatoURL = `https://www.zomato.com/search?q=${encodeURIComponent(query)}`;
+            // we do this to encode the unicode to the code which we use in json data
+            document.getElementById('searchButton').href = zomatoURL;
+        });
+    </script>
+</body>
+
+</html>
